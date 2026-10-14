@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #faf9f5;
+  --ink: #141819;
+  --ink-soft: #454747;
+  --accent: #8b5cf6;
+  --accent-soft: #b692f6;
+  --surface-dark: #121212;
+  --ring: rgba(20, 24, 25, 0.08);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-surface-dark: var(--surface-dark);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-hand: var(--font-hand);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
